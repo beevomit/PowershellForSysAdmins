@@ -43,5 +43,6 @@ $color.Length  # Object property dot notation
 Get-Member -InputObject $color  # Gets ALL methods and properties
 $color.Remove(1,1)  # Use dot notation to call object methods like Remove()
 
+# DATA STRUCTURES
 
 
