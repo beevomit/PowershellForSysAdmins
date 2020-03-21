@@ -45,4 +45,35 @@ $color.Remove(1,1)  # Use dot notation to call object methods like Remove()
 
 # DATA STRUCTURES
 
+# Array
+$colorPicker = @('blue','white','yellow','black')  # Array
+$colorPicker[1]  # Display array item 1
+$colorPicker[0..3]  # Display array items range
+$colorPicker += 'brown'  # Add item to array
+$colorPicker += @('pink','cyan')  # Add another array
+
+# ArrayList has no fixed length and works faster for retrieval
+$colorPicker = [System.Collections.ArrayList]@('blue','white','yellow','black')
+$colorPicker.Add('red')  # Add method for ArrayList
+$colorPicker.Remove('red')  # Remove method for ArrayList
+
+# Hashtables (or dictionary) - a way to correlate two pieces of data
+$users = @{
+   abertram = 'Adam Bertram'
+   zheng21 = 'Justin Zheng'
+}
+
+$users.'abertram'  # Read key element from hashtable
+$users.Keys  # See all Keys and Values
+$users.Values
+
+$users.Add('key', 'ValueHere')  # Add key and associated value
+$users.ContainsKey('key')  # Verify of a hashtable contains a particular key
+$users['key'] = 'NewValue'  # Modify existing key value
+
+# Custom Objects
+$myFirstCustomObject = New-Object -TypeName PSCustomObject
+$myFirstCustomObject = [PSCustomObject]@{OSBuild = 'x'; OSVersion = 'y'}
+
+
 
