@@ -1,0 +1,1 @@
+Write-Host 'Hello, I am a script!'
