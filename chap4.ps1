@@ -52,5 +52,17 @@ switch (expression) {
 
 # Using LOOPS
 
+# Foreach Loop
+$colorList = @('red', 'green', 'yellow')
+foreach ($color in $colorList) {
+    Write-Host "The color is: $color"
+}
 
+ForEach-Object -InputObject $colorList -Process {
+    Write-Host "The color is: $_"
+}
+
+$colorList.foreach({Write-Host "The color is: $_"})
+
+# For Loop
 
