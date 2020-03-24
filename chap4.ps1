@@ -62,7 +62,26 @@ ForEach-Object -InputObject $colorList -Process {
     Write-Host "The color is: $_"
 }
 
-$colorList.foreach({Write-Host "The color is: $_"})
+$colorList.foreach({Write-Host "The color is: $_"})  #ForEach Method - best one to use
 
 # For Loop
+# For iterating over a predetermined number of items
+for ($i = 0; $i -lt 10; $i++){
+    Write-Host $i
+}
 
+# While Loop
+$counter = 0
+while ($counter -lt 10) {
+    $counter
+    $counter++
+}
+
+# Do/While and Do/Until Loop
+do {
+    # Commands to perform
+} while ($true)
+
+do {
+    # Commands to perform
+} until ($value -eq $false)
