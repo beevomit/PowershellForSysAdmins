@@ -8,7 +8,7 @@ Get-ChildItem -Path ".\bogusDirectory" -ErrorAction Stop
 # Ignore
 # Continue
 
-$ErrorActionPreference = Stop
+$ErrorActionPreference = 'Stop'
 
 try {
     # initial code
