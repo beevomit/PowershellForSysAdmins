@@ -16,3 +16,13 @@ Invoke-Command -ScriptBlock { Write-Host "The value of foo is $using:serverFileP
 
 # PSSessions
 
+New-PSSession -ComputerName WEBSRV1
+
+$session = Get-PSSession
+
+Invoke-Command -Session $session -ScriptBlock { hostname }
+
+Enter-PSSession -ComputerName WEBSRV1  # Enter an interactive remote session
+
+Get-PSSession | Disconnect-PSSession
+Get-PSSession | Remove-PSSession  # Compeltely removes the session
