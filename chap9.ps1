@@ -9,3 +9,5 @@ describe
             assertions
             
 # See Sample.Tests.ps1 file for example
+
+Invoke-Pester -Path 'c:\Sample.Tests.ps1'
