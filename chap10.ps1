@@ -29,4 +29,15 @@ Import-Excel -Path .\Processes.xlsx
 
 Get-ExcelSheetInfo -Path .\Processes.xlsx
 
+# JSON
 
+Get-Content -Path .\Employees.json -Raw | ConvertFrom-Json
+
+(Get-Content -Path .\Employees.json -Raw | ConvertFrom-Json).Employees  # Creates an array of objects to manipulate
+
+Import-Csv -Path .\Employees_wh.csv | ConvertTo-Json
+
+(Invoke-RestMethod -Uri 'http://api.postcodes.io/random/postcodes').result  # Data from a REST API in JSON format
+
+$getCountry = (Invoke-RestMethod -Uri 'http://api.postcodes.io/random/postcodes').result
+$getCountry.country
