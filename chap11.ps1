@@ -15,3 +15,6 @@ Get-AdUser - Identity jjones  # Cleaner and faster than using -Filter
 $today = Get-Date
 $30DaysAgo = $today.AddDays(-30)
 Get-AdUser -Filter "Enabled -eq 'True' -and passwordlastset -lt '$30DaysAgo'"
+
+# Change Objects
+Get-ADUser -Filter "givenName -eq 'Jane' -and surName -eq 'Jones'" | Set-ADUser -surName 'Smith'
